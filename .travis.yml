@@ -2,4 +2,4 @@ sudo: required
 services:
   - docker
 before_install:
-  = docker build -t ttoonoott/travis -f Dockerfile.dev .
+  - docker build -t ttoonoott/travis -f Dockerfile.dev .
