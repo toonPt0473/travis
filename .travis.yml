@@ -6,3 +6,5 @@ services:
   - docker
 before_install:
   - docker build -t ttoonoott/travis -f Dockerfile.dev .
+script:
+  - docker run -e CI=true ttoonoott/travis npm run test
