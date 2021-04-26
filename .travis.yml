@@ -5,6 +5,8 @@ node_js:
 services:
   - docker
 before_install:
+  - npm install
+  - CI=true npm run test
   - docker build -t ttoonoott/travis -f Dockerfile.dev .
-script:
-  - docker run -e CI=true ttoonoott/travis npm run test
+# script:
+#   - docker run -e CI=true ttoonoott/travis npm run test
